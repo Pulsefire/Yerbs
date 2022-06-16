@@ -1,0 +1,95 @@
+#news {
+    #main-section {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 64px 0;
+        > div:first-child {
+            background-color: $lht-green;
+            padding: 32px;
+        }
+        > div:last-child {
+            max-width: 600px;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: bolder;
+            margin-bottom: 8px;
+        }
+        .text {
+            font-size: 24px;
+        }
+        margin-bottom: 128px;
+
+        @media (max-width: 1600px) {
+            flex-direction: column;
+            > div:first-child {
+                margin-bottom: 32px;
+                img {
+                    max-width: 500px;
+                }
+                padding: 32px;
+            }
+            > div:last-child {
+                padding: 16px;
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            > div:first-child {
+                margin-bottom: 32px;
+                img {
+                    max-width: 400px;
+                }
+                padding: 32px;
+            }
+            > div:last-child {
+                max-width: 500px;
+                padding: 16px;
+            }
+            .title {
+                font-size: 24px;
+                font-weight: bolder;
+            }
+            .text {
+                font-size: 16px;
+            }
+        }
+    }
+    #rest {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        article {
+            max-width: 500px;
+            margin: 32px;
+            padding: 32px;
+
+            > div:first-child {
+                height: 400px;
+                margin-bottom: 32px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    max-height: 500px;
+                    max-width: 500px;
+                }
+            }
+
+            .title {
+                font-size: 24px;
+                font-weight: bolder;
+                margin-bottom: 8px;
+            }
+            .text {
+                font-size: 16px;
+            }
+
+            box-shadow: 3px 3px 18px 6px #00000009;
+        }
+    }
+}
